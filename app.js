@@ -90,9 +90,9 @@ const createToolsArea = () => {
     deleteBtn.classList.add('delete');
     deleteBtn.innerHTML = '<i class="fas fa-times"></i>'
 
-    toolsPanel.appendChild(completeBtn)
-    toolsPanel.appendChild(editBtn)
-    toolsPanel.appendChild(deleteBtn)
+    toolsPanel.appendChild(completeBtn);
+    toolsPanel.appendChild(editBtn);
+    toolsPanel.appendChild(deleteBtn);
 
 }
 // buttons clicking options
@@ -100,6 +100,7 @@ const checkClick = e => {
  if(e.target.closest('button').classList.contains('complete')){
     e.target.closest('li').classList.toggle('completed');
     e.target.closest('button').classList.toggle('completed');
+
  } else if (e.target.closest('button').className === 'edit') {
     editTask(e)
  } else if (e.target.closest('button').className === 'delete') {
